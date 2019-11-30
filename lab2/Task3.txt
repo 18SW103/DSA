@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.*
+class Task3{
+	public static void printArray(float a[])
+	{
+		for(float i:a)
+		{
+			System.out.println(i);
+		}
+	}
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		float [] arr={1.2f,2.4f,1.4f,7.4f,6.4f,0.2f};
+		printArray(arr);
+		Arrays.sort(arr);
+		System.out.println("After Sorting");
+		printArray(arr);
+		System.out.println("Length of Array = "+arr.length);
+		System.out.print("Enter a no you want to Search = ");
+		Float sEARCH_NO=sc.nextFloat();//Taking Input from User
+		System.out.println("Location of Number is = "+Arrays.binarySearch(arr,sEARCH_NO));
+		float []arr1=Arrays.copyOf(arr,arr.length);
+		System.out.println("Copied array :- ");
+		printArray(arr1);
+		System.out.println("Equal method in java = "+Arrays.equals(arr,arr1));
+		Arrays.fill(arr1,1,5,5);//For filling a number in Array
+		printArray(arr1);
+		System.out.println("toString Method:-\n"+Arrays.toString(arr1));
+	}
+}
